@@ -12,6 +12,7 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
 
 ### Getting Started
 **These instructions assume that you already have python installed on your machine and are using VSCode as your IDE.**
+ Notice: If instructions below on running the code in a virtual environment gives you issues, just switch back to whichever environment runs the code for you.  This section is to make a later step easier, but may cause more problems than solutions. 
 
 1. When prompted, run the python code in a Python Virtual Environment.  This will make managing dependencies with pip freeze easier later on.
     - If you are not prompted to create a virtual environment, you can do it manually. 
@@ -23,5 +24,17 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
     - In the open terminal type "pip install pandas" and press enter.
     - Try running the code again.  If no errors pop up, you have all of the dependencies installed.  If you get a message about another missing dependency, do the same thing as the previous step, but replace pandas with the name of the missing dependency.
 
-### 
+### Changing Values in main.py
+**The way this code is set up, we will be using a gmail account to send the emails.  There are ways to set this up for other types of email addresses, but for now we are sticking with gmail. If you would like to use a different email provider, you can look up what Mail Protocol they use and change line 59 accordingly.**
+
+1. On line 5, replace [Your Name Here] with the name you would like to go by in your outgoing emails.  For example, my first name is Paul, so I would change '[Your Name Here]' to 'Paul'.<br><br> ![Your Name Here](readme_images/your_name_here.PNG) <br><br>
+2. On line 61 and 62, replace [Your Email Here] with your gmail adress that you would like the emails to be sent from.  For example if my email address was test@gmail.com, I would change '[Your Email Here]' to 'test@gmail.com'.<br><br> ![Your Email Here](readme_images/your_email_here.PNG) <br><br>
+
+### Adding Recipients to birthdays.csv
+* The format of the csv file is name,email,month,day
+* Do not remove the header from this file. The first line needs to say name,email,month,day
+* You can add as many recipients as you want to this file.
+* Make sure there is only One recipient per line, and no spaces in between the values, only commas.
+* It is okay to have spaces in the Name ex. 'Sue Ann'
+* The email adress for the recipients can be any working email provider.  Only the outgoing email adress from the previous step needs to be gmail in this example.<br><br> ![birthdays.csv](readme_images/recipients.PNG) <br><br>
 

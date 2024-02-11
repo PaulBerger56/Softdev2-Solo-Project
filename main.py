@@ -1,8 +1,8 @@
 import smtplib, datetime as dt, random, pandas, os
 from passwd import PASSWORD
 
-#Set the user name in the letters to your name
-user_name = 'Your Name Here'
+#Set the name to what you would like to go by on the outgoing emails
+user_name = '[Your Name Here]'
 
 # Get the current date 
 birthdays_dict = {}
@@ -10,7 +10,7 @@ now = dt.datetime.now()
 current_month = now.month
 current_day = now.day
 
-# Read in the Birthday data
+# Reads in the Birthday data from the csv file
 data = pandas.read_csv("birthdays.csv")
 
 # This line does the entire commented out for loop below in one line.  This is Dictionary Comprehension
@@ -23,10 +23,12 @@ birthdays_dict = {(row['month'], row['day']): row.to_dict() for _, row in data.i
 #     value = row.to_dict()
 #     birthdays_dict[key] = value
 
+# Sets the path to where the letters are
 letter_directory = "letter_templates/"
 
 letters = []
 
+# Goes through all of the files in letter_templates and reads in the data
 for filename in os.listdir(letter_directory):
     if filename.endswith(".txt"):  # Ensure we're only reading .txt files
         file_path = os.path.join(letter_directory, filename)  # Construct the full file path
@@ -34,12 +36,12 @@ for filename in os.listdir(letter_directory):
             letters.append(file.read())
 
 
-# See if the current date is in the dict
+# Sees if the current date is in the birthdays_dict
 check_key = (current_month, current_day)
 if check_key in birthdays_dict:
     value = birthdays_dict[check_key]
     
-    # Get the values for the correct person and draft the message
+    # Gets the values for the correct person and drafts the message
     name = value['name']
     email = value['email']    
     message = random.choice(letters)
@@ -53,7 +55,7 @@ if check_key in birthdays_dict:
     The three escapes are important to make this work properly.
     '''
     
-    # Send the email
+    # Sends the email
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user='[Your Email Here]', password=PASSWORD)
