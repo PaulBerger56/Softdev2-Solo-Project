@@ -10,7 +10,7 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
 * *Added funtionality to replace the User's name in the letter templates*
 
 ### Creating and pushing code to a private Github Repository
-**!!! If you are forking this code from my repo, make sure to save it and upload it to a new repository so that you can make it Private. At this time, there is no option to make a fork Private!!!  <br><br>
+**!!! If you are forking this code from my repo, make sure to save it and upload it to a new repository so that you can make it Private. Don't forget to delete the .git folder after copying it. At this time, there is no option to make a fork Private !!!  <br><br>
 There is sensitive information in this project including your personal gmail account name and the special password you created.  Because of this, we want to make sure that the repository is set to private.  While it is unlikely that anyone will be finding our repositories and taking our information, it is not impossible.  You never know who has web scrapers looking all over the place for information like this.  It is better to be safe than sorry! Setting the repository to private means that only the owner and anyone they set as a contributor can see the it**
 1. Navigate to your github page and go to your Repositories.  Once there, click 'New' in the top right.<br><br> ![New Repository](readme_images/repos.PNG) <br><br>
 2. Name your Repository something relevant and add a Description if you would like.  Just under Description, make sure the Satellite button next to 'Private' is Selected.  Make sure that the checkbox next to 'Add a README file' is UNCHECKED!!!!  There will be a conflict between this readme and the one you made if you leave that box checked.<br><br> ![Create a new Repo](readme_images/createANewRepo.PNG) <br><br>
@@ -107,4 +107,25 @@ A pop up box will appear with your password showing.  It would be a good idea to
         * If your requirements.txt looks extremely long like the image below, go ahead and delete the contents from it.  Copy the contents of short_requirements.txt and paste them in requirements.txt.  Feel free to delete short_requirements after copying the contents over.<br><br> ![Too many requirements](readme_images/longRequirements.PNG) <br><br>
 7. Once all of these steps have been completed, our code is ready to be sent to github.  Go ahead and type "git push" without the quotation marks into your terminal or git bash and press enter.
 
-###
+### Testing And finishing touches
+**Now that we have set everything up, we want to make sure it works before leaving it to run on it's own.  We are going to test this by setting our cron expression to run every two minutes and make sure that we have our own email address as an entry in birthdays.csv.**
+
+1. In your IDE go to main.yml and change the cron expression on line 5 to "*/2 * * * *".  This will set it to run every two minutes.<br><br> ![Two Minutes](readme_images/twoMinutes.PNG) <br><br>
+2. In birthdays.csv make sure there is an entry with an email address that you have access to with the date set as the current date.  This should still be in our csv file from earlier, but if not, go ahead and add it now.<br><br> ![birthday.csv Test](readme_images/birthdayTest.PNG) <br><br>
+3. Once both of those are set, go ahead and type "git push" without the quotation marks into your terminal and press enter. It may take some time for everything to get uploaded to github, so the code may not run right at the 2 minute mark.  
+4. While you are waiting, go ahead and navigate to the Actions tab in your repository.  You will probably see a failed action here names Create main.yml.  There is no need to worry.  This is from when we created the empty .yml file earlier with no code inside of it.<br><br> ![Failed Action](readme_images/failedAction.PNG) <br><br>
+5. After a few minutes, you should hopefully see at least one successful action named 'Run main.py' since that is what we named it in the .yml file.<br><br> ![Successful Action](readme_images/successfulActions.PNG) <br><br>
+6. Go ahead and check the inbox of the email you used in birthdays.csv. 
+    * If you see an email there from yourself Pat yourself on the back!  You successfully set up Github Actions! All we need to do now is clean things up!
+    * If you did not see an email there from yourself or you only have failed github actions, I have some bad news for you.  Something went wrong.  Go back through the steps and make sure you have everything set up and written properly.  It is easy to make a typo somewhere along the way.
+7. Now we are on the cleanup step.  
+    * Go into main.yml and revert the cron expression back to '0 7 * * *'<br><br> ![Cron Reverted](readme_images/cronReverted.PNG) <br><br>
+    * Go into birthdays.csv and delete any tester entries that you made.  There should only be entries for actual potential recipients now.
+    * If you still have short_requirements or actions.txt feel free to delete them from the project.
+
+### Congratulations!!!  You succesfully deployed python code in Github Actions!!!<br><br> ![Congrats](readme_images/congrats.png) <br><br>
+**If you have made it here, you have successfully deployed your first scheduled python code!!!  You can now leave this in the background and you will never be accused of forgetting anyone's birthday ever again!  Just don't forget to add anyone!**
+
+**Now that you have completed this, you will be able to create your own ideas and schedule them.  Try to think of other ideas you would like to have running in the background and create your own unique Programs!**
+
+**Thanks for taking the time to go through my Walkthrough - Paul**

@@ -2,7 +2,7 @@ import smtplib, datetime as dt, random, pandas, os
 from passwd import PASSWORD
 
 #Set the name to what you would like to go by on the outgoing emails
-user_name = 'Paul'
+user_name = '[Your Name Here]'
 
 # Get the current date 
 birthdays_dict = {}
@@ -58,8 +58,8 @@ if check_key in birthdays_dict:
     # Sends the email
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user='paulberger56@gmail.com', password=PASSWORD)
-        connection.sendmail(from_addr='paulberger56@gmail.com', 
+        connection.login(user='[Your Email Here]', password=PASSWORD)
+        connection.sendmail(from_addr='[Your Email Here]', 
                             to_addrs=email,
                             msg=final_message)
     
