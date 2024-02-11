@@ -38,3 +38,13 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
 * It is okay to have spaces in the Name ex. 'Sue Ann'
 * The email adress for the recipients can be any working email provider.  Only the outgoing email adress from the previous step needs to be gmail in this example.<br><br> ![birthdays.csv](readme_images/recipients.PNG) <br><br>
 
+### Creating and retrieving a password from Google
+**Google creates special passwords to be able to send emails from your code rather than directly from your gmail page.  If you are using a different email service, you will have to look up how to do this part with their available services.  We will copy the password that is generated and put it in our passwd.py file.**
+1. Go to google.com and click your profile picture in the top right and in the dropdown box click 'Manage your Google Account'.<br><br> ![Google Homepage](readme_images/google.PNG) <br><br>
+2. On the left side of the Screen, click Security.<br><br> ![Security](readme_images/security.PNG) <br><br>
+3. Scroll down to the Section labeled 'How you sign in to Google' and click on 2-Step Verification.<br><br> ![2-Step](readme_images/2Step.PNG) <br><br>
+4. If prompted to enter your password, go ahead and do so. Once on the 2-Step Verification Page, scroll all the way down to the section Labeled 'App Passwords' and click on the little arrow on the right side of the box.<br><br> ![App Password Section](readme_images/apppass.PNG) <br><br>
+5. Once on the App passwords page, type a relevant name that pertains to this project in the App name text box and click create. Try to be specific with this name so you remember what project the password goes with.<br><br> ![Create App Password](readme_images/createapppass.PNG) <br><br>
+6. __IMPORTANT!!! DO NOT SHARE THIS PASSWORD WITH ANYONE. MAKE SURE YOUR REPOSITORY IS SET TO PRIVATE BEFORE PUSHING THE CODE TO IT WITH THIS PASSWORD IN IT!!!__
+A pop up box will appear with your password showing.  It would be a good idea to save this password in a txt file or some other file locally, but outside of your project.  Once you leave this pop up window, you will not be able to access the code again.  If you lose it, you will have to create a new one and use that.<br><br> ![Password](readme_images/password.PNG) <br><br>
+7. Copy this code and open passwd.py. Once there, replace [Your password here] with the password you just copied.  For example, I would change PASSWORD = "[Your password here]" to PASSWORD = "111 awsdgt 33asda". FYI this is a fake example.<br><br> ![Password Equals](readme_images/passwordEquals.PNG) <br><br>
