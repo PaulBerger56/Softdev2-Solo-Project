@@ -10,7 +10,7 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
 
 
 ### Getting Started
-These instructions assume that you already have python installed on your machine and are using VSCode as your IDE.
+**These instructions assume that you already have python installed on your machine and are using VSCode as your IDE.**
 
 1. When prompted, run the python code in a Python Virtual Environment.  This will make managing dependencies with pip freeze easier later on.
     - If you are not prompted to create a virtual environment, you can do it manually. 
