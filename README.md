@@ -2,14 +2,14 @@
 Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Python Pro Bootcamp" by Dr. Angela Yu Day 32<br>
 * Link to course: https://www.udemy.com/course/100-days-of-code/?kw=100+days+of+code&src=sac<br><br>
 
-###**Major Changes**
+### Major Changes
 * *passwd.py added rather than keeping Google Password in main.py*
 * *Original project did not have automation.  Would only work when run*
 * *Added functionality to read in the entire letter_templates directory rather than manually typing out every line*
 * *Added funtionality to replace the User's name in the letter templates*
 
 
-###**Getting Started**
+### Getting Started
 These instructions assume that you already have python installed on your machine and are using VSCode as your IDE.
 
 1. When prompted, run the python code in a Python Virtual Environment.  This will make managing dependencies with pip freeze easier later on.
