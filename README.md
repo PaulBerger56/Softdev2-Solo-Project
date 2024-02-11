@@ -14,7 +14,7 @@ These instructions assume that you already have python installed on your machine
 
 1. When prompted, run the python code in a Python Virtual Environment.  This will make managing dependencies with pip freeze easier later on.
     - If you are not prompted to create a virtual environment, you can do it manually. 
-    - In the bottom right of the VSCode screen, you will see an area that says "Python", click on the text just to the right of that. ![Screenshot of VSCode](readme_images/VSCode.PNG)  <br> <br> 
-    - This will bring up options at the top of the screen.  Click on "Create Virtual Environment" ![Create Virtual Environment](readme_images/ve.PNG)
+    - In the bottom right of the VSCode screen, you will see an area that says "Python", click on the text just to the right of that.<br><br> ![Screenshot of VSCode](readme_images/VSCode.PNG)  <br> <br> 
+    - This will bring up options at the top of the screen.  Click on "Create Virtual Environment"<br><br> ![Create Virtual Environment](readme_images/ve.PNG)
     
 
