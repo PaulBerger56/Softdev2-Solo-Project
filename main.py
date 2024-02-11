@@ -2,7 +2,7 @@ import smtplib, datetime as dt, random, pandas, os
 from passwd import PASSWORD
 
 #Set the user name in the letters to your name
-user_name = 'Paul'
+user_name = 'Your Name Here'
 
 # Get the current date 
 birthdays_dict = {}
