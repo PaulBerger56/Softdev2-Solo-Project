@@ -1,7 +1,8 @@
-Hey [NAME],
+Dear [NAME],
 
-Happy birthday! Have a wonderful time today and eat lots of cake!
+Happy birthday! 🎂
 
-Lots of love,
+May your day be filled with love and happiness!
 
+Warmest wishes,
 [USER]
