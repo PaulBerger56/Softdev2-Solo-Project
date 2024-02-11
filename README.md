@@ -27,8 +27,8 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
 ### Changing Values in main.py
 **The way this code is set up, we will be using a gmail account to send the emails.  There are ways to set this up for other types of email addresses, but for now we are sticking with gmail. If you would like to use a different email provider, you can look up what Mail Protocol they use and change line 59 accordingly.**
 
-1. On line 5, replace [Your Name Here] with the name you would like to go by in your outgoing emails.  For example, my first name is Paul, so I would change '[Your Name Here]' to 'Paul'.<br><br> ![Your Name Here](readme_images/your_name_here.PNG) <br><br>
-2. On line 61 and 62, replace [Your Email Here] with your gmail adress that you would like the emails to be sent from.  For example if my email address was test@gmail.com, I would change '[Your Email Here]' to 'test@gmail.com'.<br><br> ![Your Email Here](readme_images/your_email_here.PNG) <br><br>
+1. On line 5, replace [Your Name Here] with the name you would like to go by in your outgoing emails.  For example, my first name is Paul, so I would change '[Your Name Here]' to 'Paul'. ex: user_name = 'Paul'<br><br> ![Your Name Here](readme_images/your_name_here.PNG) <br><br>
+2. On line 61 and 62, replace [Your Email Here] with your gmail adress that you would like the emails to be sent from.  For example if my email address was test@gmail.com, I would change '[Your Email Here]' to 'test@gmail.com'. ex: user='test@gmail.com'<br><br> ![Your Email Here](readme_images/your_email_here.PNG) <br><br>
 
 ### Adding Recipients to birthdays.csv
 * The format of the csv file is name,email,month,day
@@ -36,7 +36,16 @@ Rewritten by Paul Berger.  Original Code from "100 Days of Code: The Complete Py
 * You can add as many recipients as you want to this file.
 * Make sure there is only One recipient per line, and no spaces in between the values, only commas.
 * It is okay to have spaces in the Name ex. 'Sue Ann'
-* The email adress for the recipients can be any working email provider.  Only the outgoing email adress from the previous step needs to be gmail in this example.<br><br> ![birthdays.csv](readme_images/recipients.PNG) <br><br>
+* The email adress for the recipients can be from any working email provider.  Only the outgoing email adress from the previous step needs to be gmail in this example.<br><br> ![birthdays.csv](readme_images/recipients.PNG) <br><br>
+
+### Adding more letter templates
+**You can add as many letter templates as you want in this project.  If the code detects a birthday, one will be chosen randomly and sent to the recipient.**
+* The files must be in the .txt format.<br><br> ![Letters](readme_images/letters.PNG) <br><br>
+* For the code to add your name as the sender, and the recipients name properly, you must use the proper format. 
+    * Use the token [NAME] for the recipient's name.
+    * Use the token [USER] for the sender's name.
+    <br><br> ![Letters](readme_images/user.PNG) <br><br>
+* If done correctly, lines 45 to 48 in main.py will replace them with the proper names. <br><br> ![Replace](readme_images/replace.PNG) <br><br>
 
 ### Creating and retrieving a password from Google
 **Google creates special passwords to be able to send emails from your code rather than directly from your gmail page.  If you are using a different email service, you will have to look up how to do this part with their available services.  We will copy the password that is generated and put it in our passwd.py file.**
